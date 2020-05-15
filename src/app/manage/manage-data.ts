@@ -11,6 +11,8 @@ export enum STATE {
 
 export class ManageData {
     static onTestConnect(txt) {
+        console.log('------------In class ManageData---------------');
         console.log('this is test connect with text => ' + txt);
+        console.log('------------In class ManageData---------------');
     }
 }

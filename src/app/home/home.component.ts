@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ManageData, STATE } from '../manage/manage-data';
+import { NotUsedStatic } from '../manage/not-used-static';
 
 @Component({
   selector: 'app-home',
@@ -13,8 +14,15 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // Static refer "https://www.tutorialsteacher.com/typescript/typescript-static"
+
+    // use static on function
     ManageData.onTestConnect('hello world');
     console.log(STATE);
+
+    // not use static on function
+    let notUsedStaticObj = new NotUsedStatic();
+    notUsedStaticObj.onTestConnectNotUsedStatic();
   }
 
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ManageData, STATE } from '../manage/manage-data';
-import { NotUsedStatic } from '../manage/not-used-static';
+import { NotUsedStatic, NotUsedStaticWithParams } from '../manage/not-used-static';
 
 @Component({
   selector: 'app-home',
@@ -23,6 +23,10 @@ export class HomeComponent implements OnInit {
     // not use static on function
     let notUsedStaticObj = new NotUsedStatic();
     notUsedStaticObj.onTestConnectNotUsedStatic();
+
+    // not use static with parameter
+    let notUsedStaticWithParamsObj = new NotUsedStaticWithParams('hello world', 38);
+    notUsedStaticWithParamsObj.getParameter();
   }
 
 }

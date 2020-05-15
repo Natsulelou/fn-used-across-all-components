@@ -4,3 +4,18 @@ export class NotUsedStatic {
         console.log('this connect with not used static on function');
     }
 }
+
+export class NotUsedStaticWithParams {
+
+    txt: string;
+    num: number;
+
+    constructor(st: string, num: number) {
+        this.txt = st;
+        this.num = num;
+    }
+
+    getParameter() {
+        console.log(this.txt + ' ' + this.num);
+    }
+}

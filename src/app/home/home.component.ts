@@ -8,6 +8,8 @@ import { ManageData, STATE } from '../manage/manage-data';
 })
 export class HomeComponent implements OnInit {
 
+  stateData: STATE; // ประกาศ type ให้ stateData // undefined
+  stateDataWithData: STATE = STATE.Draft; // "draft"
   constructor() { }
 
   ngOnInit() {
